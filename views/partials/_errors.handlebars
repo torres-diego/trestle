@@ -1,0 +1,15 @@
+{{!-- PASSPORT ERRORS --}} {{#if error}}
+<div class="error__msg msg">
+    {{error}}
+    <button type="button" class="close">
+        <span>&times;</span>
+    </button>
+</div>
+{{/if}} {{#each errors}}
+<div class="error__msg msg">
+    {{text}}
+    <button type="button" class="close">
+        <span>&times;</span>
+    </button>
+</div>
+{{else}} {{/each}}

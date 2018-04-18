@@ -1,0 +1,469 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+
+:root {
+    --blue: #00A9D9;
+    --red: #ff4200;
+    --orange: #ffa200;
+    --yellow: #ffe400;
+    --green: #03cd92;
+    --black: #000;
+}
+@font-face {
+    font-family: 'kingThings';
+    src: url(../fonts/Kingthings-Clarity.ttf);
+}
+/* *******************
+PAGE WRAPPER
+******************** */
+.content__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* *******************
+NAVBAR STYLING
+******************** */
+nav {
+    padding: 10px;
+    font-family: 'kingThings';
+}
+.nav__logo {
+    font-size: 24px;
+    color: var(--green);
+}
+.nav__container {
+    display: flex;
+    height: 62px;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+}
+.nav__menu li{
+    display: inline;
+    align-self: flex-end;
+    margin: 5px;
+}
+.nav__menu .nav__link{
+    color: var(--green);
+}
+nav::before {
+    background: linear-gradient(to right, var(--red) 0%, var(--red) 20%, var(--orange) 19%, var(--orange) 40%, var(--yellow) 39%, var(--yellow) 60%, var(--green) 59%,var(--green) 80%, var(--blue) 79% ,var(--blue) 100%);
+    position: absolute;
+    content: '';
+    height: 10px;
+    right: 0;
+    left: 0;
+    top: 55px;
+}
+
+/* *******************
+INDEX PAGE STYLING
+******************** */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.container p {
+    font-family: 'kingThings';
+}
+.container a:hover {
+    text-decoration: underline;
+}
+.trestle__welcome h1 {
+    font-family: 'kingThings';
+    margin: 10px 0;
+    font-size: 48px;
+}
+.trestle__welcome a {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 18px;
+    font-family: 'kingThings';
+    color: var(--green);
+}
+
+/* *******************
+LOGIN FORM STYLING
+******************** */
+.form__container{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+.form__container h2 {
+    font-family: 'kingThings';
+    font-size: 36px;
+    margin: 10px 0;
+}
+.login__form label {
+    font-family: 'kingThings';
+    font-size: 18px;
+    display: block;
+    margin: 5px 0;
+}
+.login__form .email-group {
+    margin: 10px 0;
+    display: block;
+    width: 200px;
+}
+.login__form .password-group {
+    margin: 10px 0;
+    display: block;
+    width: 200px;
+}
+.email-group input, .password-group input {
+    width: 200px;
+    height: 30px;
+}
+.email-group input:focus, .password-group input:focus {
+    border-color: rgba(0, 169, 217, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 169, 217, 0.075) inset, 0 0 5px rgba(0, 169, 217, 0.06);
+    /* outline: 0 none; */
+}
+.login__form button {
+    margin: 10px 0;
+    background-color: var(--blue);
+    border: none;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'kingThings';
+    border-radius: 3px;
+}
+.login__form button:hover {
+    cursor: pointer;
+}
+/* *******************
+REGISTER FORM STYLING
+******************** */
+.register__form label {
+    font-family: 'kingThings';
+    font-size: 18px;
+    display: block;
+    margin: 10px 0;
+}
+.register__form input {
+    width: 200px;
+    height: 30px;
+}
+.register__form input:focus {
+    border-color: rgba(0, 169, 217, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 169, 217, 0.075) inset, 0 0 5px rgba(0, 169, 217, 0.06);
+    /* outline: 0 none; */
+}
+.register__form button {
+    margin: 10px 0;
+    background-color: var(--blue);
+    border: none;
+    width: 100%;
+    height: 30px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'kingThings';
+    border-radius: 3px;
+}
+.register__form button:hover {
+    cursor: pointer;
+}
+/* *******************
+STRATEGY INDEX STYLING
+******************** */
+.strategy__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.strategy__card {
+    margin: 10px;
+    padding: 10px;
+    width: 50%;
+    font-family: 'kingThings';
+    border: 2px solid var(--green);
+    border-radius: 3px;
+}
+.strategy__card img {
+    max-width: 100%;
+}
+.strategy__card p {
+    padding: 5px;
+    text-transform: capitalize;
+}
+/* *******************
+STRATEGY FORM STYLING
+******************** */
+.strategy__form__container {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+.strategy__form__container h2 {
+    font-family: 'kingThings';
+    font-size: 36px;
+    margin: 10px 0;
+}
+.strategy__form {
+    padding: 0 10px;
+}
+
+.strategy__form label {
+    font-family: 'kingThings';
+    font-size: 18px;
+    display: block;
+    margin: 10px 0;
+}
+.strategy__form input[type=text] {
+    width: 200px;
+    height: 30px;
+}
+.strategy__form input[type=date] {
+    width: 250px;
+    height: 40px;
+    margin: 10px 0;
+    font-family: 'kingThings';
+}
+.strategy__form select {
+    width: 250px;
+    height: 40px;
+    margin: 10px 0;
+    background-color: #fff;
+    border-color: var(--green);
+    font-family: 'kingThings';
+}
+.strategy__form textarea {
+    margin: 10px 0;
+    width: 400px;
+    border-color: var(--green);
+}
+.strategy__form input:focus {
+    border-color: rgba(0, 169, 217, 0.8);
+    box-shadow: 0 1px 1px rgba(0, 169, 217, 0.075) inset, 0 0 5px rgba(0, 169, 217, 0.06);
+    /* outline: 0 none; */
+}
+.strategy__form button {
+    margin: 10px 0;
+    background-color: var(--blue);
+    border: none;
+    width: 220px;
+    height: 30px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'kingThings';
+    border-radius: 3px;
+}
+.strategy__form button:hover {
+    cursor: pointer;
+}
+.radio-buttons label {
+    display: inline-block;
+    margin: 10px 0;
+}
+.radio-buttons input[type=radio] {
+    display: inline-block;
+}
+/* *******************
+CHILD INDEX FORM STYLING
+******************** */
+.child__container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+.child__card {
+    margin: 10px;
+    padding: 10px;
+    font-family: 'kingThings';
+    border: 2px solid var(--green);
+    border-radius: 3px;
+}
+.child__card p {
+    padding: 5px;
+    text-transform: capitalize;
+}
+.child__card button {
+    margin: 10px 0;
+    background-color: var(--blue);
+    border: none;
+    width: 220px;
+    height: 30px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'kingThings';
+    border-radius: 3px;
+}
+.child__card button a {
+    color: #fff;
+}
+/* *******************
+CHILD INDEX FORM STYLING
+******************** */
+.child__form label {
+    font-family: 'kingThings';
+    font-size: 18px;
+    display: block;
+    margin: 5px 0;
+}
+.child__form input {
+    width: 200px;
+    height: 30px;
+    margin: 5px 0;
+}
+.child__form button {
+    margin: 10px 0;
+    background-color: var(--blue);
+    border: none;
+    width: 220px;
+    height: 30px;
+    color: #fff;
+    font-size: 18px;
+    font-family: 'kingThings';
+    border-radius: 3px;
+}
+.child__form button:hover {
+    cursor: pointer;
+}
+.success__msg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'kingThings';
+    color: #fff;
+    width: 500px;
+    height: 20px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--green);
+    transition: all 0.5s ease-in;
+}
+.error__msg {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'kingThings';
+    color: #fff;
+    width: 500px;
+    height: 20px;
+    border-radius: 4px;
+    text-align: center;
+    padding: 10px;
+    background-color: var(--red);
+    transition: all 0.5s ease-in;
+}
+/* *******************
+ALERT CLOSE BUTTON
+******************** */
+.close {
+    border: none;
+    font-size: 24px;
+    background-color: transparent;
+    color: #fff;
+}
+.close:hover{
+    cursor: pointer;
+}
+.hide {
+    display: none;
+    transition: all 0.5s ease-in;
+}
+/* *******************
+MENU ICON BUTTON
+******************** */
+.menu__icon {
+    display: none;
+    border: none;
+    background-color: transparent;
+    font-family: 'kingThings';
+    font-size: 24px;
+    color: var(--green);
+}
+.menu__icon:hover {
+    cursor: pointer;
+}
+
+/* *******************
+MEDIA QUERIES
+******************** */
+@media (max-width: 610px) {
+    .strategy__form textarea {
+        width: 300px;
+    }
+}

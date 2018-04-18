@@ -1,0 +1,15 @@
+<div class="strategy__container">
+    {{#each strategies}}
+    <div class="strategy__card">
+        {{!-- <img src="http://via.placeholder.com/350x150" alt=""> --}}
+        <h3>{{childName}}</h3>
+        <p>{{strategyDate}}</p>
+        <p>{{description}}</p>
+        <p>{{timeOfDay}}</p>
+        <p{{effectiveness}}</p>
+        <p>{{learningStrategy}}</p>
+    </div>
+    {{else}}
+    <p>No Feedback Has Been Given</p>
+    {{/each}}
+</div>

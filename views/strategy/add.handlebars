@@ -1,0 +1,50 @@
+ {{#each errors}}
+<div>{{text}}</div>
+{{/each}}
+<div class="strategy__form__container">
+    <h2>Strategy Feedback</h2>
+    <div class="strategy__form">
+        <form action="/strategy" method="post">
+            <div>
+                <label for="strategyDate">Date of Strategy</label>
+                <input type="date" name="strategyDate">
+            </div>
+            <div>
+                <label for="timeOfDay">Time Of Day</label>
+                <select name="timeOfDay">
+                    <option disabled selected value>Select An Option</option>
+                    <option value="Morning">Morning</option>
+                    <option value="Afternoon">Afternoon</option>
+                    <option value="Evening">Evening</option>
+                </select>
+            </div>
+            <div>
+                <label for="learningStrategy">What Did You Do To Help The Child Learn</label>
+                <select name="learningStrategy">
+                    <option disabled selected value>Select An Option</option>
+                    <option value="Communication">Communication</option>
+                    <option value="Visual Schedules">Visual Schedules</option>
+                </select>
+            </div>
+            <div>
+                <textarea name="description" cols="30" rows="10" placeholder="Please Describe The Strategy Further"></textarea>
+            </div>
+            <div class="radio-buttons">
+                <label for="effectiveness">Was The Strategy Effective?</label>
+               <div>
+                    <input type="radio" name="effectiveness" value="Ineffective">
+                    <label for="ineffective">Ineffective</label>
+               </div>
+               <div>
+                    <input type="radio" name="effectiveness" value="Inconsistent">
+                    <label for="inconsistent">Inconsistent</label>
+               </div>
+               <div>
+                    <input type="radio" name="effectiveness" value="Effective">
+                    <label for="effective">Effective</label>
+                </div>
+            </div>
+            <button type="submit">Save</button>
+        </form>
+    </div>
+</div>

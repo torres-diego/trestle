@@ -1,0 +1,24 @@
+<div class="form__container">
+    <h2>Create An Account</h2>
+    <div class="register__form">
+        <form action="/users/register" method="post">
+            <div class="name__group">
+                <label for="name">Name</label>
+                <input type="text" name="name" value="{{name}}" required>
+            </div>
+            <div class="email__group">
+                <label for="email">Email</label>
+                <input type="email" name="email" value="{{email}}" required>
+            </div>
+            <div class="password__group">
+                <label for="password">Password</label>
+                <input type="password" name="password" value="{{password}}" required>
+            </div>
+            <div class="confirm__password__group">
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" name="confirmPassword" value="{{confirmPassword}}" required>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</div>

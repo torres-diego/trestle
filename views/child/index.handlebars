@@ -1,0 +1,13 @@
+<div class="child__container">
+    {{#each children}}
+    <div class="child__card">
+        <p>Child: {{childName}}</p>
+        <p>Grade: {{grade}}</p>
+        <button>
+            <a href="/strategy/add">Add A Strategy</a>
+        </button>
+    </div>
+    {{else}}
+    <p>No Strategies Have Been Given</p>
+    {{/each}}
+</div>

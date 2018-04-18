@@ -1,0 +1,15 @@
+<nav>
+  <div class="nav__container">
+    <a href="/" class="nav__logo">Trestle</a>
+      <ul class="nav__menu">
+        {{#if user}}
+         <li><a href="/child/add" class="nav__link">Add Child</a></li>
+          <li><a href="/strategy/index" class="nav__link">Strategies</a></li>
+        <li><a href="/users/logout" class="nav__link">Logout</a></li>
+        {{else}}
+        <li><a href="/users/login" class="nav__link">Login</a></li>
+        <li><a href="/users/register" class="nav__link">Register</a></li>
+        {{/if}}
+      </ul>
+  </div>
+</nav>
