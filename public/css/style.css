@@ -462,6 +462,11 @@ MENU ICON BUTTON
 /* *******************
 MEDIA QUERIES
 ******************** */
+@media (max-width: 525px) {
+    .success__msg, .error__msg {
+        width: 300px;
+    }
+}
 @media (max-width: 610px) {
     .strategy__form textarea {
         width: 300px;
